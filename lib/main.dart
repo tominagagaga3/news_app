@@ -138,26 +138,26 @@ class _NewsListPageState extends State<NewsListPage> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: (a.imageUrl != null && a.imageUrl!.isNotEmpty)
+              child: (a.imageUrl != null &&
+                      a.imageUrl!.isNotEmpty &&
+                      a.imageUrl!.startsWith("https"))
                   ? Image.network(
                       a.imageUrl!,
                       width: 92,
                       height: 92,
                       fit: BoxFit.cover,
-                      errorBuilder: (_, __, ___) => Container(
+                      errorBuilder: (_, __, ___) => Image.asset(
+                        "assets/images/no_image.png",
                         width: 92,
                         height: 92,
-                        alignment: Alignment.center,
-                        color: Colors.black12,
-                        child: const Icon(Icons.image_not_supported),
+                        fit: BoxFit.cover,
                       ),
                     )
-                  : Container(
+                  : Image.asset(
+                      "assets/images/no_image.png",
                       width: 92,
                       height: 92,
-                      alignment: Alignment.center,
-                      color: Colors.black12,
-                      child: const Icon(Icons.article),
+                      fit: BoxFit.cover,
                     ),
             ),
             const SizedBox(width: 12),
