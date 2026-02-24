@@ -7,7 +7,6 @@ void main() {
   runApp(const MyApp());
 }
 
-const String newsApiKey = String.fromEnvironment('NEWS_API_KEY');
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -63,12 +62,15 @@ class Article {
 
 class NewsApi {
   static Future<List<Article>> fetchTopHeadlines() async {
-final uri = Uri.https("newsapi.org", "/v2/top-headlines", {
-  "category": "technology",
-  "language": "en",
-  "pageSize": "20",
-  "apiKey": newsApiKey,
-});
+final uri = Uri(
+  path: "/api/news",
+  queryParameters: {
+    "category": "technology",
+    "language": "en", 
+    "pageSize": "20",
+    "page": "1",
+  },
+);
 
   final res = await http.get(uri);
   debugPrint("STATUS: ${res.statusCode}");
