@@ -1,5 +1,8 @@
 # 📰 Flutter News App
 
+🔗 ** URL **  
+https://news-app-green-three-31.vercel.app/
+
 Flutterの学習用として作成したニュースアプリです。  
 APIからニュースを取得し、一覧表示・詳細表示ができるシンプルなアプリです。
 
