@@ -1,17 +1,25 @@
-# news_app
+# 📰 Flutter News App
 
-A new Flutter project.
+Flutterの学習用として作成したニュースアプリです。  
+APIからニュースを取得し、一覧表示・詳細表示ができるシンプルなアプリです。
 
-## Getting Started
+Flutterの基本構造や、API通信の流れを理解することを目的に制作しました。
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 できること
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- 最新ニュースの取得
+- 記事一覧の表示
+- 記事をタップして外部ブラウザで開く
+- 画像がない場合のフォールバック表示
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 💡 工夫した点
+
+- APIキーをコードに直接書かず、`--dart-define` で安全に管理
+- GitHubにAPIキーが公開されない構成にしている
+- 画像が表示できない場合のフォールバックUIを実装
+
+---
